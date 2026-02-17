@@ -18,10 +18,6 @@ questions = [
 ]
 answers = prompt(questions)
 
-console.print(
-    f"Title: {answers['title']}\n\nDescription: {answers['description']}\n\nInstructions: {answers['instructions']}\n\nUsage: {answers['usage']}\n\nLicense: {answers['license']}\n\nAuthor: {answers['author']}\n\nContact: {answers['contact']}"
-)
-
 readme = open("README.md", "x")
 readme.write(f"# {answers['title']}\n\n")
 readme.write(f"## Description\n{answers['description']}\n\n")
@@ -31,3 +27,8 @@ readme.write(f"## License\n{answers['license']}\n\n")
 readme.write(f"## Author\n{answers['author']}\n\n")
 readme.write(f"## Contact Information\n{answers['contact']}\n")
 readme.close()
+
+console.print(
+    f"Title: {answers['title']}\n\nDescription: {answers['description']}\n\nInstructions: {answers['instructions']}\n\nUsage: {answers['usage']}\n\nLicense: {answers['license']}\n\nAuthor: {answers['author']}\n\nContact: {answers['contact']}"
+)
+
