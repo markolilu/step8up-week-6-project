@@ -1,8 +1,5 @@
 from InquirerPy import prompt
 from rich.console import Console
-from rich.table import Table
-from rich.progress import Progress
-import time
 import readmegen
 
 console = Console()
@@ -25,5 +22,7 @@ console.print(table)
 
 
 
+
+console.print("[bold green]Readme.Md Complete![/bold green] ✅")
 
 

@@ -1,5 +1,6 @@
 from rich.table import Table
-
+from rich.progress import Progress
+import time
 
 def mDGen(answers):
     readme = open("README.md", "x")
@@ -22,5 +23,11 @@ def mDGen(answers):
     table.add_column("Contact", justify="center", style="blue")
 
     table.add_row(answers['title'], answers['description'], answers['instructions'], answers['usage'], answers['license'], answers['author'], answers['contact'])
+
+    with Progress() as progress:
+        task = progress.add_task("Processing...", total=100)
+        for _ in range(10):
+            time.sleep(0.3)
+            progress.update(task, advance=10)
 
     return table
