@@ -10,7 +10,7 @@ questions = [
     {"type": "input", "name": "description", "message": "Describe your project?"},
     {"type": "input", "name": "instructions", "message": "What are the instructions for installing this project?"},
     {"type": "input", "name": "usage", "message": "Please input usage information:"},
-    {"type": "list", "name": "license", "message": "What is the license for this project?", "choices": ["MIT", "GPLv3", "Apache 2.0", "BSD 3-Clause", "None"]},
+    {"type": "list", "name": "license", "message": "What is the license for this project?", "choices": ["MIT", "GPL v3", "LGPL v3", "MPL 2.0", "CC0", "Apache 2.0", "No License"]},
     {"type": "input", "name": "author", "message": "Who is the author of this project?"},
     {"type": "input", "name": "contact", "message": "What is your contact information?"},
 ]
@@ -19,9 +19,6 @@ answers = prompt(questions)
 
 table = readmegen.mDGen(answers)
 console.print(table)
-
-
-
 
 console.print("[bold green]Readme.Md Complete![/bold green] ✅")
 
