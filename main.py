@@ -32,3 +32,11 @@ console.print(
     f"Title: {answers['title']}\n\nDescription: {answers['description']}\n\nInstructions: {answers['instructions']}\n\nUsage: {answers['usage']}\n\nLicense: {answers['license']}\n\nAuthor: {answers['author']}\n\nContact: {answers['contact']}"
 )
 
+table = Table(title="Sample Data")
+table.add_column("Title", justify="right", style="cyan")
+table.add_column("Description", style="magenta")
+table.add_column("Instructions", justify="right", style="green")
+table.add_column("License", justify="right", style="yellow")
+table.add_column("Author", justify="right", style="red")
+table.add_column("Contact", justify="right", style="blue")
+
